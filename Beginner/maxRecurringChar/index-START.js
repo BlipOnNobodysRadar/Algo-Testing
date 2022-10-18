@@ -2,8 +2,8 @@
 Given a string of text, find and return the most recurring character. 
 e.g maxRecurringChar('aabacada') // will return 'a'
 */
-
-function maxRecurringCharMine(text) {
+// mine
+function maxRecurringChar(text) {
   const letterCounts = {};
   let max = 0;
   let maxChar = "";
@@ -17,8 +17,8 @@ function maxRecurringCharMine(text) {
     }
   }
   return letter;
-}
-function maxRecurringCharObj(text) {
+} //obj
+function maxRecurringChar(text) {
   let charMap = {};
   let maxCharValue = 0;
   let maxChar = "";
@@ -41,10 +41,16 @@ function maxRecurringChar(text) {
   for (let char of text) {
     charMap.hasOwnProperty(char) ? charMap[char]++ : (charMap[char] = 1);
   }
-  charArr = Object.keys(charMap);
+  charArray = Object.keys(charMap);
   valuesArray = Object.values(charMap);
   maxCharValue = Math.max(...valuesArray);
   return charArray[valuesArray.indexOf(maxCharValue)];
 }
+
+/* --- TEST RESULTS
+Mine: 17% slower
+Key in: fastest
+Arrays: 29% slower
+*/
 
 module.exports = maxRecurringChar;
