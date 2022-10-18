@@ -34,4 +34,10 @@ function searchReplace(str, word, newWord) {
 /* --- TEST RESULTS
 string: fastest
 regex: 51.15% slower
+
+Note: the reason regex is slower here is because only the first occurance of the word is being replaced. When replace() recieves a string argument, it finds the first occurance and replaces then stops.
+
+When it recieves regex it searches the entire string to replace every occurance, which is likely why it's slower.
+
+This isn't mentioned in the course.
 */
