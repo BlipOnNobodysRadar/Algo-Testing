@@ -3,10 +3,13 @@ Given a string of text, write an algorithm that returns the text received in a r
 E.g reverseString('algorithms') // should return 'smhtirogla'
 */
 
+// test = 'This contains a few different words, some of which may be akljalskdhjsa nonsense.';
+// longestWord(test);
+
 // first pass
 function longestWord(text) {
   return text.split(" ").reduce((longest, word) => {
-    return word.length > longest ? word : longest;
+    return word.length > longest.length ? word : longest;
   }, "");
 }
 // for loop
@@ -42,5 +45,11 @@ function longestWord(text) {
     .sort((wordA, wordB) => wordB.length - wordA.length);
   return sortedArray[0];
 }
+/* --- TEST RESULTS
+first pass: 55.58% slower
+for loop: fastest
+reduce: 26.04% slower
+sort: 80.03% slower
+*/
 
 module.exports = longestWord;
