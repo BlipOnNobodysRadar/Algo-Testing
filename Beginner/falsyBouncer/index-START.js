@@ -18,4 +18,14 @@ function falsyBouncer(array) {
   return array.filter((value) => value);
 }
 
+// test falsyBouncer([1, 0, null, '', 5])
+/* --- TEST RESULTS
+for loop: fastest
+filter: fastest
+Both equally fast within their margin of error on jsbench.me.
+
+Retest has .filter() at 3.38% slower than the for loop.
+
+ */
+
 module.exports = falsyBouncer;
