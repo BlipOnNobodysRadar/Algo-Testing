@@ -46,10 +46,10 @@ function longestWord(text) {
   return sortedArray[0];
 }
 /* --- TEST RESULTS
-first pass: 55.58% slower
+first pass: 21.3% slower
 for loop: fastest
-reduce: 26.04% slower
-sort: 80.03% slower
+reduce: 21.69% slower
+sort: 79.85% slower
 */
 
 module.exports = longestWord;
