@@ -18,13 +18,22 @@ function palindromeChecker(text) {
 }
 // optimized loop
 function palindromeChecker(text) {
-  let textLen = text.length;
+  var textLen = text.length;
   for (var i = 0; i < textLen / 2; i++) {
     if (text[i] !== text[textLen - 1 - i]) {
       return false;
     }
-    return true;
   }
+  return true;
 }
-
+/* --- TEST RESULTS
+1. 'racecar'
+intuitive: 92.2% slower
+for loop: 87.1% slower
+optimized for loop: fastest
+2. 'not a palindrome'
+intuitive: 99.61% slower
+for loop: 99.22% slower
+optimized for loop: fastest
+*/
 module.exports = palindromeChecker;
