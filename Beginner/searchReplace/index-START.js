@@ -25,3 +25,13 @@ function searchReplace(str, word, newWord) {
   }
   return str.replace(regex, newWord);
 }
+
+// searchReplace(sentence, word, newWord)
+// sentence = "He is Sleeping on the couch"
+// word = "Sleeping"
+// newWord = "sitting"
+
+/* --- TEST RESULTS
+string: fastest
+regex: 51.15% slower
+*/
