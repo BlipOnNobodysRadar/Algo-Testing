@@ -18,7 +18,7 @@ function isAnagram(stringA, stringB) {
   return sanitizeString(stringA) === sanitizeString(stringB);
 }
 
-// direct comparison
+// charMap
 function isAnagram(stringA, stringB) {
   function createCharMap(text) {
     let charMap = {};
@@ -47,5 +47,14 @@ function isAnagram(stringA, stringB) {
     return false;
   }
 }
+
+// const one = 'silent'
+// const two = 'listen'
+// isAnagram(one,two)
+
+/* --- TEST RESULTS
+direct: fastest
+charMap: 26.99% slower
+*/
 
 module.exports = isAnagram;
