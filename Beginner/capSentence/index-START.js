@@ -3,7 +3,7 @@ Given a sentence containing two or more words,
 return the equivalent of the sentence when capitalised. E.g
   capSentence('the tales of scotch!') // would return 'The Tales Of Scotch!' 
 */
-
+capSentence(test);
 // mine
 function capSentence(text) {
   return text
@@ -38,5 +38,11 @@ function capSentence(text) {
   });
   return capsArray.join(" ");
 }
+/* --- TEST RESULTS
+Mine: fastest, likely because I did not convert the entire string to lowercase.
+forEach: 63% slower
+.map() and .slice(): 3.93% slower
+.map() and .replace(): 35% slower
+*/
 
 module.exports = capSentence;
